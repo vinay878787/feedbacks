@@ -81,11 +81,11 @@ function Form() {
 
   useEffect(() => {
     const loginInfo = JSON.parse(localStorage.getItem("loginInfo"));
-    const username = loginInfo.name;
-    const email = loginInfo.email;
+    const username = loginInfo.name || "";
+    const email = loginInfo.email || "";
     console.log("username :",username);
     console.log("email:",email);
-    setUserName(username.name);
+    setUserName(username);
   }, []);
   return (
     <div className={styles.formWrapper}>
