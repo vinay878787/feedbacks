@@ -80,7 +80,11 @@ function Form() {
   };
 
   useEffect(() => {
-    const username = JSON.parse(localStorage.getItem("loginInfo"));
+    const loginInfo = JSON.parse(localStorage.getItem("loginInfo"));
+    const username = loginInfo.name;
+    const email = loginInfo.email;
+    console.log("username :",username);
+    console.log("email:",email);
     setUserName(username.name);
   }, []);
   return (
