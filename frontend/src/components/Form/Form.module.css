@@ -1,0 +1,119 @@
+.formWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: orangered;
+    background-image: linear-gradient(to right, purple, blue);
+    position: relative;
+}
+
+.formContainer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #000;
+    margin-top: 60px; /* Added margin to create space between profileContainer and formContainer */
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: orangered;
+    font-weight: 900;
+}
+
+.label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: orangered;
+    font-weight: 700;
+}
+
+.inputBox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.inputBox:focus {
+    border-color: orangered;
+    outline: none;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: orangered;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #555;
+}
+
+.profileContainer {
+    position: fixed;
+    top: 10px; /* Adjusted for spacing */
+    right: 10px; /* Adjusted for spacing */
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.profile {
+    width: 2rem;
+    padding: 10px 22px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logoutBtn {
+    width: 5rem;
+    background-color: red;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .formContainer {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .formContainer {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .formContainer {
+        width: 90%;
+    }
+}
