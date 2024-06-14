@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import { username, email } from "../../utils/userDetails";
 import toast from "react-hot-toast";
 import styles from "./Form.module.css";
+
+const loginInfo = JSON.parse(localStorage.getItem("loginInfo"));
+export const username = loginInfo.name || "";
+export const email = loginInfo.email || "";
 
 const BACKENDURI = import.meta.env.VITE_BACKEND_URI;
 
@@ -79,14 +82,6 @@ function Form() {
     navigate("/");
   };
 
-  useEffect(() => {
-    const loginInfo = JSON.parse(localStorage.getItem("loginInfo"));
-    const username = loginInfo.name || "";
-    const email = loginInfo.email || "";
-    console.log("username :",username);
-    console.log("email:",email);
-    setUserName(username);
-  }, []);
   return (
     <div className={styles.formWrapper}>
       <Toaster />
